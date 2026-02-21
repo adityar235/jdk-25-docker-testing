@@ -11,7 +11,7 @@ FROM eclipse-temurin:25-jdk
 
 WORKDIR /app
 
-COPY target/rest-demo.jar /app/rest-app.jar
+COPY target/student-app.jar /app/rest-app.jar
 
 #EXPOSE 8080
 
