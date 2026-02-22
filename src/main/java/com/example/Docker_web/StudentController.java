@@ -23,4 +23,15 @@ class StudentController {
 
         return repo.findAll();
     }
+
+    @RequestMapping("/addStudent")
+    public void addStudent(){
+
+        Student s = new Student();
+        s.setAge(23);
+        s.setId(3);
+        s.setName("Roushan");
+        repo.save(s);
+        System.out.println("Hey one Roushan student get added !");
+    }
 }

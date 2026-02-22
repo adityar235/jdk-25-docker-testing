@@ -13,7 +13,7 @@ services:
       - student-ka-net
 
   postgres:
-    image: postgres:latest
+    image: postgres:17
 #    container_name: postgres-db
     restart: always
     environment:
@@ -24,8 +24,13 @@ services:
       - "5433:5432"
     networks:
       - student-ka-net
+    volumes:
+      - postgres-student-data:/var/lib/postgresql/data
 
 
 networks:
   student-ka-net:
     driver: bridge
+
+volumes:
+  postgres-student-data:
